@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Overwatch Replay Remote</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="panel hero-panel">
+        <div>
+          <p class="eyebrow">Remote Replay Control</p>
+          <h1>Overwatch Replay Remote</h1>
+          <p class="subtitle">
+            Send commands to your gaming PC and watch the OBS stream from your phone.
+          </p>
+        </div>
+        <div class="status-card">
+          <span class="status-label">API Status</span>
+          <strong id="statusText">Ready</strong>
+        </div>
+      </section>
+
+      <section class="panel video-panel">
+        <div class="panel-header">
+          <h2>Live Stream</h2>
+          <span>Placeholder OBS embed</span>
+        </div>
+        <video controls autoplay muted playsinline>
+          <source src="http://YOUR_STREAM_URL" type="video/mp4" />
+          Your browser does not support embedded video playback.
+        </video>
+      </section>
+
+      <section class="panel controls-panel">
+        <div class="panel-header">
+          <h2>Controls</h2>
+          <span>Tap a button to queue a command</span>
+        </div>
+        <div class="button-grid">
+          <button data-command="start_ow">Start Overwatch</button>
+          <button data-command="open_replay">Open Replay Menu</button>
+          <button data-command="select_replay_1">Select Replay 1</button>
+          <button data-command="play_pause">Play / Pause</button>
+        </div>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
